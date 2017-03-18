@@ -10,7 +10,7 @@ $collection = $db->products;
 
 $sku = $_GET["p"];
 
-$result = $collection -> find(["SKU" => $sku]);
+$result = $collection -> find(["sku" => $sku]);
 
 foreach ($result as $product)
 {

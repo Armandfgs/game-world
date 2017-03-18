@@ -25,6 +25,7 @@ function getProduct()
 function fillPage(product)
 {
     document.getElementById("prodPageName").innerHTML = product.name + " - " + product.platform;
+    document.getElementById("prodImage").src = "../res/images/" + product.image;
     if (product.hasOwnProperty("otherPlatforms"))
     {
         $("#prodPageDropdownRow").append(generateDropdown("Platform", product["otherPlatforms"], "platform"));

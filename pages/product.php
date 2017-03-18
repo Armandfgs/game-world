@@ -16,7 +16,7 @@ setAccountTab();
 <div class="row" id="prodDetailsTop">
     <div class="col-md-2"></div>
     <div class="col-md-4">
-        <img src="http://www.w3schools.com/w3images/lights.jpg" alt="Lights" class="imgStyle">
+        <img src="" id="prodImage" class="img-responsive">
     </div>
     <div class="col-md-4">
         <div class="row bottom30" id="prodPageDropdownRow"></div>
