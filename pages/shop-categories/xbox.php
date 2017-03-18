@@ -55,19 +55,6 @@ outputNav("shop");
         ');
         }   
     ?>
-        <!--section for pagination-->
-        <div id="pagination" class="pagination text-center col-md-12">
-            <a href="#">&laquo;</a> <!-- the previous arrow for the pagination links-->
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">&raquo;</a> <!-- the next arrow for the pagination links-->
-        </div>
-    </div>
-</div>
 
 <?php
     footer();
