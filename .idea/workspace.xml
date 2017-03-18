@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="466f1c8c-ce9b-4fb7-9c76-11bd8178e1a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin-pages/delete-product.php" afterPath="$PROJECT_DIR$/admin-pages/delete-product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin-pages/find-products.php" afterPath="$PROJECT_DIR$/admin-pages/find-products.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin-pages/manage-products.php" afterPath="$PROJECT_DIR$/admin-pages/manage-products.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin-pages/store-edited-product.php" afterPath="$PROJECT_DIR$/admin-pages/store-edited-product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin-pages/store-product.php" afterPath="$PROJECT_DIR$/admin-pages/store-product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop-categories/action-adventure.php" afterPath="$PROJECT_DIR$/pages/shop-categories/action-adventure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop-categories/action.php" afterPath="$PROJECT_DIR$/pages/shop-categories/action.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop-categories/adventure.php" afterPath="$PROJECT_DIR$/pages/shop-categories/adventure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop-categories/first-person-shooters.php" afterPath="$PROJECT_DIR$/pages/shop-categories/first-person-shooters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop-categories/pc.php" afterPath="$PROJECT_DIR$/pages/shop-categories/pc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop-categories/ps4.php" afterPath="$PROJECT_DIR$/pages/shop-categories/ps4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop-categories/role-playing.php" afterPath="$PROJECT_DIR$/pages/shop-categories/role-playing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop-categories/sports.php" afterPath="$PROJECT_DIR$/pages/shop-categories/sports.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop-categories/strategy.php" afterPath="$PROJECT_DIR$/pages/shop-categories/strategy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop-categories/xbox.php" afterPath="$PROJECT_DIR$/pages/shop-categories/xbox.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/shop.php" afterPath="$PROJECT_DIR$/pages/shop.php" />
-    </list>
+    <list default="true" id="466f1c8c-ce9b-4fb7-9c76-11bd8178e1a1" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="delete-product.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin-pages/delete-product.php">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="1393">
+              <caret line="294" column="0" lean-forward="true" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -485,12 +467,12 @@
       <workItem from="1489803413779" duration="9000" />
       <workItem from="1489848829540" duration="1544000" />
       <workItem from="1489852594196" duration="1947000" />
-      <workItem from="1489861975279" duration="377000" />
+      <workItem from="1489861975279" duration="545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135301000" />
+    <option name="totallyTimeSpent" value="135469000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -708,13 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="304" column="10" lean-forward="false" selection-start-line="304" selection-start-column="10" selection-end-line="304" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/OneDrive - Middlesex University/CSD2550_Coursework2-E-CommerceWebsite/To Sync/common.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3336">
@@ -912,6 +887,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1393">
+          <caret line="294" column="0" lean-forward="true" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
           <folding />
         </state>
       </provider>
