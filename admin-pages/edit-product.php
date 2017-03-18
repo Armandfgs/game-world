@@ -9,7 +9,7 @@
     <div class="col-md-5 editProduct">
         <h2 class="pageHeaders" "> Edit Product</h2>
         <div class="col-md-10">
-        <form method="post" action="store-edited-product.php" onsubmit="return productEditValidation()" name="editProduct">
+        <form method="post" action="store-edited-product.php?id=58cd8b2c9543a92b68002e41" onsubmit="return productEditValidation()" name="editProduct">
 
             <fieldset>
                 <div class="form-group">
