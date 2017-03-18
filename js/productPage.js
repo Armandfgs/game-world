@@ -24,7 +24,6 @@ function getProduct()
 
 function fillPage(product)
 {
-    console.log(product);
     document.getElementById("prodPageName").innerHTML = product.name + " - " + product.platform;
     if (product.hasOwnProperty("otherPlatforms"))
     {

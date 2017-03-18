@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="466f1c8c-ce9b-4fb7-9c76-11bd8178e1a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin-pages/edit-product.php" afterPath="$PROJECT_DIR$/admin-pages/edit-product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin-pages/store-edited-product.php" afterPath="$PROJECT_DIR$/admin-pages/store-edited-product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin-pages/delete-product.php" afterPath="$PROJECT_DIR$/admin-pages/delete-product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/productPage.js" afterPath="$PROJECT_DIR$/js/productPage.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +32,7 @@
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7424">
+            <state relative-caret-position="29">
               <caret line="256" column="0" lean-forward="false" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
               <folding />
             </state>
@@ -103,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit-product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin-pages/edit-product.php">
+      <file leaf-file-name="delete-product.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin-pages/delete-product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-377">
-              <caret line="11" column="88" lean-forward="false" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
+            <state relative-caret-position="1218">
+              <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -116,28 +115,18 @@
       <file leaf-file-name="store-edited-product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin-pages/store-edited-product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="851">
-              <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+            <state relative-caret-position="1016">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="43" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getUserOrders.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getUserOrders.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/getUserOrders.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1027">
               <caret line="23" column="65" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getProduct.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/getProduct.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -197,14 +186,14 @@
         <option value="$PROJECT_DIR$/js/login.js" />
         <option value="$PROJECT_DIR$/php/getProduct.php" />
         <option value="$PROJECT_DIR$/pages/product.php" />
-        <option value="$PROJECT_DIR$/js/productPage.js" />
         <option value="$USER_HOME$/OneDrive - Middlesex University/CSD2550_Coursework2-E-CommerceWebsite/To Sync/common.php" />
-        <option value="$PROJECT_DIR$/admin-pages/delete-product.php" />
         <option value="$PROJECT_DIR$/css/custom.css" />
         <option value="$PROJECT_DIR$/pages/shop.php" />
         <option value="$PROJECT_DIR$/includes/common.php" />
         <option value="$PROJECT_DIR$/admin-pages/edit-product.php" />
         <option value="$PROJECT_DIR$/admin-pages/store-edited-product.php" />
+        <option value="$PROJECT_DIR$/js/productPage.js" />
+        <option value="$PROJECT_DIR$/admin-pages/delete-product.php" />
       </list>
     </option>
   </component>
@@ -288,6 +277,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game-world" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game-world" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -522,12 +525,12 @@
       <workItem from="1489865042912" duration="2000" />
       <workItem from="1489865053431" duration="7000" />
       <workItem from="1489865157672" duration="183000" />
-      <workItem from="1489865370983" duration="1597000" />
+      <workItem from="1489865370983" duration="1939000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138426000" />
+    <option name="totallyTimeSpent" value="138768000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -728,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/productPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
@@ -833,21 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin-pages/delete-product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7424">
-          <caret line="256" column="0" lean-forward="false" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/shop.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -866,6 +847,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1479">
           <caret line="51" column="69" lean-forward="false" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/getProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/getUserOrders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1027">
+          <caret line="23" column="65" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/productPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="256" column="0" lean-forward="false" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -921,10 +934,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/getProduct.php">
+    <entry file="file://$PROJECT_DIR$/admin-pages/edit-product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="-1906">
+          <caret line="11" column="88" lean-forward="false" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
           <folding />
         </state>
       </provider>
@@ -937,26 +950,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin-pages/edit-product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="11" column="88" lean-forward="false" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin-pages/store-edited-product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+        <state relative-caret-position="1016">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="43" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/getUserOrders.php">
+    <entry file="file://$PROJECT_DIR$/admin-pages/delete-product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1027">
-          <caret line="23" column="65" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="65" />
+        <state relative-caret-position="1218">
+          <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
           <folding />
         </state>
       </provider>

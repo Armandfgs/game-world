@@ -38,7 +38,9 @@ $product = [
 //$productID = array('_id' => new MongoId($id));
 //$deleteID = $products->remove($productID);
 
-$id = $_GET['id'];
+$idString = $_GET["id"];
+
+$id = new MongoDB\BSON\ObjectID( $idString );
 
 $deleteID = $products->deleteOne(
     ['_id' => $id]
