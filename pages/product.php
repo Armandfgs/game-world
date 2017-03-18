@@ -47,7 +47,7 @@ setAccountTab();
         <p id="prodPrice" class="lead"> Price: </p>
     </div>
     <div class="col-md-4 text-center" >
-        <button type="button" class="btn btn-default">Add to Cart</button>
+        <button type="button" class="btn btn-default" onclick="addToCart();">Add to Cart</button>
     </div>
 </div>
 <script type="text/javascript">

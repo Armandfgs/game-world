@@ -33,7 +33,7 @@ function updateAccount()
 
             }
         }
-    }
+    };
     xhr.send(formData);
 }
 
