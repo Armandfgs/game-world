@@ -149,5 +149,45 @@ function footer()
         </html>
     ');
 }
+
+function outputAdminNav($pageName)
+{
+    echo
+    ('
+        <header>
+        <h1 id="title">Game World</h1>
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/game-world/index.php">Game World</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                
+                <li '. setActive($pageName, "home") .'><a href="/game-world/admin-pages/admin.php">Home <span class="glyphicon glyphicon-home"></span> </a></li>
+                <li '. setActive($pageName, "shop") .'><a href="/game-world/admin-pages/manage-products.php">Manage Products </a></li>
+                <li'. setActive($pageName, "account") .'><a href="/game-world/admin-pages/manage-admins.php">Manage Admins </a></li>
+                <li'. setActive($pageName, "cart") .'><a href="/game-world/admin-pages/view-orders.php">View Orders </a></li>
+                <li'. setActive($pageName, "contact") .'><a href="/game-world/admin-pages/login.php">Logout </a></li>
+                <li>
+                  
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+        </header>
+    ');
+}
+
 ?>
 
