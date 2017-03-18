@@ -46,7 +46,7 @@ outputNav("shop");
                 <div class="caption"> <!--bootstrap code for product description inside each product -->
                     <h4>'. $document["name"] .'</h4>
                     <h5>Price:' . $document["price"] .'</h5>
-                    <h5>Plaform:' . $document["platform"] .'</h5>
+                    <h5>Platform:' . $document["platform"] .'</h5>
                     <h5>Availability: <span class="inStock">In Stock</span></h5>
                     <a href="product.php" role="button" class="viewProduct">View Item</a>
                     <button class="cartButton">Add to Cart  <span class="glyphicon glyphicon-shopping-cart"></span></button>

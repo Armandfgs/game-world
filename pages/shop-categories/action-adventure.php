@@ -30,7 +30,7 @@ outputNav("shop");
         $gameworld = $client->gameworld;
         $product = $gameworld->products;
 
-        $search = $product->find(['genre' => 'action-adventure'], ["sort" => ["platform" => 1]]);
+        $search = $product->find(['genre' => 'Action-Adventure'], ["sort" => ["platform" => 1]]);
 
         foreach ($search as $document) {
 

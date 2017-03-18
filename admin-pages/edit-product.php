@@ -13,34 +13,34 @@
 
             <fieldset>
                 <div class="form-group">
-                    <input type="file" accept ="image" onchange="readURL(this);" name ="image" id ="image" placeholder="image" value="image">
+                    <input type="file" accept ="image" onchange="readURL(this);" name ="image" id ="image" placeholder="image">
                     <img id="inputImage" src="#" alt="image" />
                     <div id="image_invalid"></div>
                 </div>
 
                 <div class="form-group ">
-                    <input type="text" class="form-control" name="name" id ="name" placeholder="name" value="Product name" required maxlength="16">
+                    <input type="text" class="form-control" name="name" id ="name" placeholder="Product Name">
                     <div id="productname_invalid"></div>
                 </div>
 
                 <div class="form-group">
                         <select class="form-control" name="genre" id="genre" value="genre">
-                            <option>first-person-shooter</option>
-                            <option>action</option>
-                            <option>action-adventure</option>
-                            <option>adventure</option>
-                            <option>role-playing</option>
-                            <option>sports</option>
-                            <option>strategy</option>
+                            <option>First-Person shooter</option>
+                            <option>Action</option>
+                            <option>Action-Adventure</option>
+                            <option>Adventure</option>
+                            <option>Role-Playing</option>
+                            <option>Sports</option>
+                            <option>Strategy</option>
                         </select>
                         <div id="category_invalid"></div>
                 </div>
 
                 <div class="form-group">
-                        <select class="form-control" name="platform" id="platform" value="platform">
-                            <option>pc</option>
-                            <option>playstation4</option>
-                            <option>xboxOne</option>
+                        <select class="form-control" name="platform" id="platform" placeholder="platform">
+                            <option>PC</option>
+                            <option>Playstation 4</option>
+                            <option>Xbox One</option>
                         </select>
                         <div id="platform_invalid"></div>
                 </div>
@@ -56,23 +56,26 @@
                 </div>   
 
                 <div class="form-group">
-                        <input type="text" class="form-control" name="releaseDate" id ="releaseDate" placeholder="releaseDate" value="Release Date">
+                        <input type="text" class="form-control" name="releaseDate" id ="releaseDate" placeholder="Release Date">
                         <div id="release_invalid"></div>
                 </div>
 
                 <div class="form-group">
-                        <input type="text" class="form-control" name="developer" id ="developer" placeholder="developer" value="developer">
+                        <input type="text" class="form-control" name="developer" id ="developer" placeholder="developer">
                         <div id="developer_invalid"></div>
                 </div>
 
                 <div class="form-group">
-                        <input type="text" class="form-control" name="model" id ="model" placeholder="model" value="Single/ Multiplayer">
+                        <select class="form-control" name="model" id ="model" value="model">
+                            <option>Single-Player</option>
+                            <option>Single-Player, Multiplayer</option>
+                        </select>
                         <div id="model_invalid"></div>
                 </div>
 
                 <div class="form-group">
-                        <input type="text" class="form-control" name="sku" id ="sku" placeholder="sku" value="Factory release code">
-                        <div id="sku_invalid"></div>
+                        <input type="text" class="form-control" name="SKU" id ="SKU" placeholder="Factory Release Code (SKU)">
+                        <div id="SKU_invalid"></div>
                 </div>   
 
                 <a href="manage-products.php" class="btn btn-danger" role="button">Cancel</a>
@@ -111,7 +114,7 @@
     var release = document.forms["editProduct"]["releaseDate"];
     var developer = document.forms["editProduct"]["developer"];
     var model = document.forms["editProduct"]["model"];
-    var sku = document.forms["editProduct"]["sku"];
+    var SKU = document.forms["editProduct"]["SKU"];
 
 	var image_invalid = document.getElementById("image_invalid");
 	var productName_invalid = document.getElementById("productname_invalid");
@@ -122,7 +125,7 @@
     var release_invalid = document.getElementById("release_invalid");
     var developer_invalid = document.getElementById("developer_invalid");
     var model_invalid = document.getElementById("model_invalid");
-    var sku_invalid = document.getElementById("sku_invalid");
+    var SKU_invalid = document.getElementById("SKU_invalid");
 
 	productName.addEventListener("blur", productNameVerification, true);
     category.addEventListener("blur", categoryVerification, true);
@@ -132,7 +135,7 @@
     release.addEventListener("blur", releaseVerification, true);
     developer.addEventListener("blur", developerVerification, true);
     model.addEventListener("blur", modelVerification, true);
-    sku.addEventListener("blur", skuVerification, true);
+    SKU.addEventListener("blur", SKUVerification, true);
 	
 
 	function productEditValidation(){
@@ -208,11 +211,11 @@
             return false;
         }
 
-        //sku validation
-        if(sku.value == ""){
-            sku_invalid.textContent = "Factory release code required";
-            sku.style.border = "2px solid red";
-            sku.focus();
+        //SKU validation
+        if(SKU.value == ""){
+            SKU_invalid.textContent = "Factory release code required";
+            SKU.style.border = "2px solid red";
+            SKU.focus();
             return false;
         }
 	}
@@ -305,14 +308,14 @@
             }
         }   
 
-        //verify sku selection
-        function skuVerification(){
-            if (sku.value != "") {
-                sku_invalid.innerHTML = "";
-                sku.style.border = "2px solid green";
+        //verify SKU selection
+        function SKUVerification(){
+            if (SKU.value != "") {
+                SKU_invalid.innerHTML = "";
+                SKU.style.border = "2px solid green";
                 return true;
             }else{
-                sku.style.border = "none";
+                SKU.style.border = "none";
             }
         }   
 
