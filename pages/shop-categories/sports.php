@@ -1,6 +1,5 @@
 <?php
 include ("../../includes/common.php");
-mongoConnectionPages();
 outputHead("Game World - Shop");
 outputNav("shop");
 ?>

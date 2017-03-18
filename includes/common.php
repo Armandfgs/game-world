@@ -56,9 +56,9 @@ function outputNav($pageName)
                 <li '. setActive($pageName, "shop") . 'class="dropdown">
                   <a href="/game-world/pages/shop.php" class="dropdown-toggle" data-toggle="dropdown">Shop <span class="glyphicon glyphicon-euro"></span> <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="/game-world/pages/shop.php">PC</a></li>
-                    <li><a href="/game-world/pages/shop.php">Playstation 4</a></li>
-                    <li><a href="/game-world/pages/shop.php">Xbox One</a></li>
+                    <li><a href="/game-world/pages/shop-categories/pc.php">PC</a></li>
+                    <li><a href="/game-world/pages/shop-categories/ps4.php">Playstation 4</a></li>
+                    <li><a href="/game-world/pages/shop-categories/xbox.php">Xbox One</a></li>
                     <li class="divider"></li>
                     <li><a href="/game-world/pages/shop.php">All</a></li>
                   </ul>
