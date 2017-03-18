@@ -74,8 +74,8 @@
                 </div>
 
                 <div class="form-group">
-                        <input type="text" class="form-control" name="SKU" id ="SKU" placeholder="Factory Release Code (SKU)">
-                        <div id="SKU_invalid"></div>
+                        <input type="text" class="form-control" name="sku" id ="sku" placeholder="Factory Release Code (sku)">
+                        <div id="sku_invalid"></div>
                 </div>            
 
                 <a href="manage-products.php" class="btn btn-danger" role="button">Cancel</a>
@@ -114,7 +114,7 @@
     var release = document.forms["addProduct"]["releaseDate"];
     var developer = document.forms["addProduct"]["developer"];
     var model = document.forms["addProduct"]["model"];
-    var SKU = document.forms["addProduct"]["SKU"];
+    var sku = document.forms["addProduct"]["sku"];
 
     var image_invalid = document.getElementById("image_invalid");
     var productName_invalid = document.getElementById("productname_invalid");
@@ -125,7 +125,7 @@
     var release_invalid = document.getElementById("release_invalid");
     var developer_invalid = document.getElementById("developer_invalid");
     var model_invalid = document.getElementById("model_invalid");
-    var SKU_invalid = document.getElementById("SKU_invalid");
+    var sku_invalid = document.getElementById("sku_invalid");
     
     productName.addEventListener("blur", productNameVerification, true);
     category.addEventListener("blur", categoryVerification, true);
@@ -135,7 +135,7 @@
     release.addEventListener("blur", releaseVerification, true);
     developer.addEventListener("blur", developerVerification, true);
     model.addEventListener("blur", modelVerification, true);
-    SKU.addEventListener("blur", SKUVerification, true);
+    sku.addEventListener("blur", skuVerification, true);
     
 
     function productAddValidation(){
@@ -211,11 +211,11 @@
             return false;
         }
 
-        //SKU validation
-        if(SKU.value == ""){
-            SKU_invalid.textContent = "Factory release code required";
-            SKU.style.border = "2px solid red";
-            SKU.focus();
+        //sku validation
+        if(sku.value == ""){
+            sku_invalid.textContent = "Factory release code required";
+            sku.style.border = "2px solid red";
+            sku.focus();
             return false;
         }
     }
@@ -308,14 +308,14 @@
             }
         }   
 
-        //verify SKU selection
-        function SKUVerification(){
-            if (SKU.value != "") {
-                SKU_invalid.innerHTML = "";
-                SKU.style.border = "2px solid green";
+        //verify sku selection
+        function skuVerification(){
+            if (sku.value != "") {
+                sku_invalid.innerHTML = "";
+                sku.style.border = "2px solid green";
                 return true;
             }else{
-                SKU.style.border = "none";
+                sku.style.border = "none";
             }
         }   
 
