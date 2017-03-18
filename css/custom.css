@@ -1,0 +1,294 @@
+/*GENERAL CSS*/
+.imgStyle{
+    width: 100%;
+}
+
+#footer{
+    margin-top: 30px;
+    border-top-style: solid;
+    border-top-color: #e7e7e7;
+    padding: 10px;
+}
+
+.error{
+    border: 1px solid red;
+}
+/*PAGE CSS*/
+#prodDetailsList{
+    list-style:none;
+    padding-left: 0%;
+}
+#prodDetailsList li{
+    font-size: larger;
+    padding-top: 5%;
+}
+#prodDetailsTop{
+    padding-bottom: 3%;
+}
+#prodDescription{
+    font-size: larger;
+}
+
+/*INDEX CSS*/
+.content-block-one {
+    padding: 30px;
+    margin-bottom: 0px;
+    color: inherit;
+    background-color: #eee;
+}
+.content-block-one h1,
+.content-block-one .h1 {
+    color: inherit;
+}
+.content-block-one p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+}
+.content-block-one > hr {
+    border-top-color: #d5d5d5;
+}
+.container .content-block-one {
+    border-radius: 6px;
+}
+.content-block-one .container {
+    max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .content-block-one {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+    .container .content-block-one {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    .content-block-one h1,
+    .content-block-one .h1 {
+        font-size: 63px;
+    }
+}
+.content-space-one {
+    padding: 0px;
+    margin-bottom: 0px;
+    color: inherit;
+    background: url(../res/images/logo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    text-align: center;
+}
+.content-space-two {
+    padding: 0px;
+    margin-bottom: 0px;
+    color: inherit;
+    background: url(http://placehold.it/1200x650/0B1746/ffffff) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+.content-space-three {
+    padding: 0px;
+    margin-bottom: 0px;
+    color: inherit;
+    background: url(http://placehold.it/1200x650/0B1746/ffffff) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+/*FORMS CSS*/
+form{
+    width: 100%;
+}
+
+input{
+    border-radius: 5px;
+    border: solid;
+    border-color: #e7e7e7;
+}
+
+#passExplanation{
+    font-size: 15px !important;
+}
+
+.pageHeaders{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: left;
+}
+
+.createAccount{
+    border-right-style: solid ;
+    border-right-color: #e7e7e7;
+}
+
+#createAccount{
+    margin-left: 30px;
+}
+
+
+/*CONTACT US CSS*/
+#infoUs{
+    margin-top: 100px;
+}
+
+#map{
+    height: 500px;
+}
+
+#aboutUsTxt{
+    margin-bottom: 50px;
+}
+
+/*PRODUCT PAGE CSS*/
+#editionDropdown{
+
+}
+
+.header3{
+    margin-top: 0% !important;
+    text-align: left;
+}
+#productDescription{
+    text-align: justify;
+}
+
+#recSpecs{
+    text-align: left;
+}
+
+.bottom30{
+    margin-bottom:30px;
+}
+
+#price{
+    font-size: 30px !important;
+    text-align: left;
+}
+
+/*CART PAGE CSS*/
+
+.cartItem{
+    padding: 20px;
+    border: solid;
+    border-color: #e7e7e7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/*SHOP PAGE CSS*/
+/* SIDE BAR CSS */
+#sideBar{
+    margin-left:15%;
+    margin-top:25px;
+    width:250px;
+    background-color:#f8f8f8;
+    border:1px #e7e7e7 solid;
+    font-family: 'Source sans pro', Helvetica, Arial, sans-serif;
+    color:#777;
+}
+
+/*SIDE BAR BULLET POINTS CSS*/
+#sideBar li{
+    margin-top:10px;
+    font-size:18px;
+}
+
+/*SIDE BAR WHEN HOVERED OVER CSS*/
+#sideBar li :hover{
+    text-decoration: none;
+    background-color: #efefef;
+}
+
+/*SIDE BAR HEADER CSS*/
+#sideBar h3{
+    padding-bottom:4px;
+    border-bottom:1px solid #efefef;
+}
+
+/*PAGINATION CSS*/
+#pagination{
+    width:600px;
+    margin-bottom:20px;
+    display:inline-block;
+    float:left;
+    transition: background-color .5s;
+}
+
+/*PAGINATION ANCHOR ELEMENT CSS*/
+#pagination a{
+    padding: 8px 16px;
+    text-decoration:none;
+    transition: background-color .5s;
+    border: 1px solid #efefef;
+}
+
+/*PAGINATION ON HOVER CSS*/
+#pagination :hover{
+    background-color: #efefef;
+}
+
+/*PAGINATION WHEN ACTIVE CSS*/
+#pagination :active {
+    background-color: #efefef;
+    color: white;
+}
+
+/*PRODUCT LIST SECTION CSS*/
+#productsList{
+    margin-left:50px;
+}
+
+/* PRODUCT LIST HEADER CSS*/
+#productsList h2{
+    border:1px solid #efefef;
+}
+
+/*PRODUCT LIST IMAGES CSS*/
+#productsList img{
+    float:left;
+    margin-bottom:5px;
+    width:300px;
+
+}
+
+/*PRODUCT LIST ANCHOR ELEMENT CSS*/
+#productList a{
+    float:left;
+    margin-top:5px;
+}
+
+/*IN STOCK BUTTON INSIDE PRODUCT SECTION CSS*/
+.inStock{
+    background-color:#5eba4b;
+    color:white;
+    padding:3px;
+}
+
+/*VIEW PRODUCT INSIDE PRODUCT SECTION CSS*/
+.viewProduct{
+    color: #333;
+    background-color:#efefef;
+}
+
+/*THE CART ICON INSIDE PRODUCT SECTION CSS*/
+.cartButton{
+    float:right;
+    background-color: #efefef;
+}
+
+/*THE CART ICON WHEN HOVERED OVER CSS*/
+.cartButton :hover{
+    color:#f8f8f8;
+}
