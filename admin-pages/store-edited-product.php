@@ -1,6 +1,6 @@
 <?php
   //path to required driver
-  require '../php-mongodb-driver/vendor/autoload.php';
+  require '../phpmongodb/vendor/autoload.php';
   //connect to Mongodb
   $client = new MongoDB\Client;
   //select a database

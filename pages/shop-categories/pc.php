@@ -24,7 +24,7 @@ outputNav("shop");
 
          <?php
 
-        require '../../php-mongodb-driver/vendor/autoload.php';
+        require '../../phpmongodb/vendor/autoload.php';
 
         //this can be used to output products in shop.php
         $client = new MongoDB\Client;
