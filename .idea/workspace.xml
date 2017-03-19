@@ -29,23 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="cart.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cart.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="61" column="115" lean-forward="false" selection-start-line="61" selection-start-column="115" selection-end-line="61" selection-end-column="115" />
+            <state relative-caret-position="257">
+              <caret line="83" column="86" lean-forward="false" selection-start-line="83" selection-start-column="86" selection-end-line="83" selection-end-column="86" />
               <folding>
-                <marker date="1489967818706" expanded="true" signature="3381:3387" ph="€" />
+                <marker date="1489967966146" expanded="true" signature="3381:3387" ph="€" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createOrder.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createOrder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/createOrder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+            <state relative-caret-position="174">
+              <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -542,12 +542,12 @@
       <workItem from="1489865157672" duration="183000" />
       <workItem from="1489865370983" duration="1939000" />
       <workItem from="1489874338397" duration="15699000" />
-      <workItem from="1489940447948" duration="21169000" />
+      <workItem from="1489940447948" duration="21237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175636000" />
+    <option name="totallyTimeSpent" value="175704000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -976,21 +976,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cart.js">
+    <entry file="file://$PROJECT_DIR$/php/createOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="61" column="115" lean-forward="false" selection-start-line="61" selection-start-column="115" selection-end-line="61" selection-end-column="115" />
-          <folding>
-            <marker date="1489967818706" expanded="true" signature="3381:3387" ph="€" />
-          </folding>
+        <state relative-caret-position="174">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/createOrder.php">
+    <entry file="file://$PROJECT_DIR$/js/cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="257">
+          <caret line="83" column="86" lean-forward="false" selection-start-line="83" selection-start-column="86" selection-end-line="83" selection-end-column="86" />
+          <folding>
+            <marker date="1489967966146" expanded="true" signature="3381:3387" ph="€" />
+          </folding>
         </state>
       </provider>
     </entry>

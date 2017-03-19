@@ -82,7 +82,6 @@ function calculateTotal() {
         {
             var total =  xhr.responseText;
             document.getElementById("totalPrice").innerHTML = "Total: &euro;" + total;
-            console.log(total);
         }
     };
     xhr.send();
@@ -130,7 +129,6 @@ function addToCart()
 
 function removeItem(sku) {
 
-    console.log(sku);
     var url =  "../php/removeFromCart.php?p=" + sku;
     var xhr = new XMLHttpRequest();
     xhr.open("POST",url, true);
@@ -191,7 +189,6 @@ function updateCart(sku)
             var priceElement = "price-" + sku;
             document.getElementById(priceElement).innerHTML = "&euro;" + values.subtotal;
             document.getElementById("totalPrice").innerHTML = "Total: &euro;" + values.total;
-            console.log(values);
         }
     };
     xhr.send();
