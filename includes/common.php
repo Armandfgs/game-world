@@ -194,6 +194,9 @@ function cartCount()
     if (isset($_SESSION["cartCount"]))
     {
         return $_SESSION["cartCount"];
+    }else
+    {
+        return "";
     }
 }
 

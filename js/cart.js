@@ -95,6 +95,7 @@ function emptyCart() {
         if (xhr.readyState == 4 && xhr.status == 200)
         {
             showCartItems();
+            document.getElementById("cartItemCount").innerHTML ="";
         }
     };
     xhr.send();
@@ -124,8 +125,9 @@ function addToCart()
 }
 
 function removeItem(sku) {
+
     console.log(sku);
-    var url =  "../php/removeFromCart.php?p" + sku;
+    var url =  "../php/removeFromCart.php?p=" + sku;
     var xhr = new XMLHttpRequest();
     xhr.open("POST",url, true);
 
