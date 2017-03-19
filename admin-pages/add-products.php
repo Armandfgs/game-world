@@ -14,7 +14,7 @@
             <fieldset>
                 <div class="form-group">
                     <input type="file" accept ="image" onchange="readURL(this);" name ="image" id ="image" placeholder="image">
-                    <img id="inputImage" src="#" alt="image" />
+                    <img id="inputImage" src="#" />
                     <div id="image_invalid"></div>
                 </div>
 
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="form-group">
-                        <input type="text" class="form-control" name="price" id ="price" placeholder="price" value="€0.00">
+                        <input type="number" step="0.01" class="form-control" name="price" id ="price" placeholder="0.00" value="0.00">
                         <div id="price_invalid"></div>
                 </div>
 
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="form-group">
-                        <input type="text" class="form-control" name="releaseDate" id ="releaseDate" placeholder="Release Date">
+                        <input type="datetime-local" class="form-control" name="releaseDate" id ="releaseDate" placeholder="Release Date">
                         <div id="release_invalid"></div>
                 </div>
 
@@ -88,6 +88,10 @@
 </div>
     
     <script type="text/javascript">
+
+    var date = new Date(),
+    dt = document.getElementById('releaseDate');
+dt.value = date.toISOString();
 
     //reads the url from the uploaded file and displays the picture input by the user
     function readURL(input) {

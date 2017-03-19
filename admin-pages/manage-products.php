@@ -46,7 +46,7 @@
                  <div class="divTableCell"><h6>'. $document["platform"] . '</h6></div>
                  <div class="divTableCell"><h6>'. $document["genre"] . '</h6></div>
                  <div class="divTableCell"><h6>'. $document["releaseDate"] . '</h6></div>
-                 <div class="divTableCell"><h6>'. $document["price"] . '</h6></div>
+                 <div class="divTableCell"><h6>€'. $document["price"] . '</h6></div>
                  <div class="divTableCell"><a href="edit-product.php?id='. $document["_id"] .' " class="btn btn-link btn-sm " role="button"><span class="glyphicon glyphicon-edit"></span> edit</a></div>
                  <div class="divTableCell"><a href="delete-product.php?id='. $document["_id"] .' " class="btn btn-danger btn-sm "><span class="glyphicon glyphicon-trash"></span> delete</a></div>
             </div>
