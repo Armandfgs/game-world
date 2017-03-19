@@ -91,7 +91,7 @@
 
     var date = new Date(),
     dt = document.getElementById('releaseDate');
-dt.value = date.toISOString();
+    dt.value = date.toISOString();
 
     //reads the url from the uploaded file and displays the picture input by the user
     function readURL(input) {

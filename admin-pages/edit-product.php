@@ -9,11 +9,29 @@
     <div class="col-md-5 editProduct">
         <h2 class="pageHeaders" "> Edit Product</h2>
         <div class="col-md-10">
-        <form method="post" action="store-edited-product.php?id=58cd8b2c9543a92b68002e41" onsubmit="return productEditValidation()" name="editProduct">
 
+<?php
+
+    require '../phpmongodb/vendor/autoload.php';
+
+    //this can be used to output products in shop.php
+    $client = new MongoDB\Client;
+    $gameworld = $client->gameworld;
+    $product = $gameworld->products;
+
+    $search = $product->find();
+
+    foreach ($search as $document) {
+        echo ('
+
+        <form method="post" id="postMethod" action="store-edited-product.php?id='. $document["_id"] .' " onsubmit="return productEditValidation()" name="editProduct">
+        
+        ');
+    }
+?>
             <fieldset>
                 <div class="form-group">
-                    <input type="file" accept ="image" onchange="readURL(this);" name ="image" id ="image" placeholder="image">
+                    <input type="file" accept ="image" onchange="readURL(this)" name ="image" id ="image" placeholder="image">
                     <img id="inputImage" src="#" />
                     <div id="image_invalid"></div>
                 </div>
@@ -88,6 +106,10 @@
 </div>
 	
 	<script type="text/javascript">
+
+     var date = new Date(),
+    dt = document.getElementById('releaseDate');
+    dt.value = date.toISOString();
 
     //reads the url from the uploaded file and displays the picture input by the user
     function readURL(input) {

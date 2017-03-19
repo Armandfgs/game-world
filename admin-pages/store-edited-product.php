@@ -51,5 +51,5 @@ $bulk->update(["_id" => $id], $product);
 $manager->executeBulkWrite('gameworld.products', $bulk);
 //$products ->updateOne(['_id' => new \MongoDB\BSON\ObjectID('58cc137df8a2f50c78004352')], ['$set' => [$product]]);
 
-//header('Location: manage-products.php');
+header('Location: manage-products.php');
 exit;
