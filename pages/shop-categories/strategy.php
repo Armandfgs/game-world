@@ -39,7 +39,7 @@ outputNav("shop");
         <!--the product section-->
         <div class="col-xs-12 col-sm-4 col-md-4"> <!-- bootstrap column size and sections for productList -->
             <div class="thumbnail"> <!--bootstrap code for thumbnails inside product section for each product -->
-                <a href="product.php" alt="the product">
+                <a href="../product.php?p=' . $document["sku"] . ' " alt="the product">
                     <img src=/game-world/res/images/'. $document["image"] .'>
                 </a>
                 <div class="caption"> <!--bootstrap code for product description inside each product -->
@@ -47,7 +47,7 @@ outputNav("shop");
                     <h5>Price:' . $document["price"] .'</h5>
                     <h5>Plaform:' . $document["platform"] .'</h5>
                     <h5>Availability: <span class="inStock">In Stock</span></h5>
-                    <a href="product.php" role="button" class="viewProduct">View Item</a>
+                    <a href="../product.php?p=' . $document["sku"] . ' " role="button" class="viewProduct">View Item</a>
                     <button class="cartButton">Add to Cart  <span class="glyphicon glyphicon-shopping-cart"></span></button>
                 </div>
             </div>
