@@ -20,6 +20,10 @@ if(isset($_SESSION["email"]))
 
     $returnVal = $collection->insertOne($order);
 
+    unset($_SESSION["cartItems"]);
+    unset($_SESSION["cartCount"]);
+    unset($_SESSION["total"]);
+
     echo "successful";
 }else
 {

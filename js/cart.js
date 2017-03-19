@@ -19,8 +19,9 @@ function showCartItems()
                                                 '<div class=" col-md-8" id="cartHeader">' +
                                                     '<div class="col-md-6 lead text-left">Name</div>' +
                                                     '<div class="col-md-2 lead text-left">Platform</div>' +
+                                                    '<div class="col-md-1 lead text-left">Quantity</div>' +
                                                     '<div class="col-md-2 lead text-center">Price</div>' +
-                                                    '<div class="col-md-2 lead text-center">Delete</div>' +
+                                                    '<div class="col-md-1 lead text-center">Delete</div>' +
                                                 '</div>'+
                                             '<div class="col-md-2"></div>' +
                                         '</div>');
@@ -31,10 +32,11 @@ function showCartItems()
                     $("#cartItems").append(buildCartItem(cartItems[i]));
                 }
                 $("#cartItems").append('<div class="row">' +
-                                            '<div class="text-center lead" id="totalPrice"></div>');
+                                            '<div class="lead text-center" id="totalPrice"></div>' +
+                                        '</div>');
                 calculateTotal();
                 $("#cartItems").append('<div class="row text-center">'+
-                                            '<button type="button" class="btn btn-success"onclick="confirmOrder();">Confirm Order</button>'+
+                                            '<button type="button" class="btn btn-success" onclick="confirmOrder();">Confirm Order</button>'+
                                             '<button type="button" class="btn btn-danger" onclick="emptyCart();">Clear Cart</button>'+
                                         '</div>');
             }else
@@ -50,13 +52,15 @@ function buildCartItem(cartItem)
 {
     var plusValue = "plus-" + cartItem.sku;
     var minusValue = "minus-" + cartItem.sku;
+    var price = cartItem.quantity * cartItem.price;
     var itemDiv = '<div class="row">' +
                         '<div class="col-md-2"></div>' +
                             '<div class="col-md-8 cartItem">' +
                                 '<div class="col-md-6 lead text-left"> '+ cartItem.name +' </div>' +
                                 '<div class="col-md-2 lead text-left">'+ cartItem.platform +'</div>' +
-                                '<div class="col-md-2 lead text-center" id="'+cartItem.sku+'"> &euro;'+ cartItem.price+'</div>' +
-                                '<div class="col-md-2 lead text-center">' +
+                                '<div class="col-md-1 lead text-left"><input class="col-md-12" onblur="updateCart('+ cartItem.sku +')" id="' + cartItem.sku + '" type="number" value="'+cartItem.quantity +'" min="1"/></div>' +
+                                '<div class="col-md-2 lead text-center" id="price-'+cartItem.sku+'"> &euro;'+ price+'</div>' +
+                                '<div class="col-md-1 lead text-center">' +
                                     '<button type="button" class="btn btn-danger" onclick="removeItem('+cartItem.sku+')">X</button>' +
                                 '</div>' +
                             '</div>' +
@@ -162,6 +166,32 @@ function confirmOrder()
             {
                 window.location.href="/game-world/pages/account.php";
             }
+        }
+    };
+    xhr.send();
+}
+
+function updateCart(sku)
+{
+    var id = "" +sku;
+    var quantity = document.getElementById(id).value;
+    var url = "../php/updateQuantity.php?p=" + sku + "&q=" + quantity;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET",url, true);
+
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+    xhr.onreadystatechange = function ()
+    {
+        if (xhr.readyState == 4 && xhr.status == 200)
+        {
+            var result = xhr.responseText;
+            var values = JSON.parse(result);
+            var priceElement = "price-" + sku;
+            document.getElementById(priceElement).innerHTML = "&euro;" + values.subtotal;
+            document.getElementById("totalPrice").innerHTML = "Total: &euro;" + values.total;
+            console.log(values);
         }
     };
     xhr.send();

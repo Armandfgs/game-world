@@ -25,6 +25,8 @@ foreach ($result as $product)
                     'name' => $product["name"],
                     'platform' => $product["platform"],
                     'price' => $product["price"],
+                    'subtotal'=>$product["price"],
+                    'quantity'=> 1
     ];
     $_SESSION["total"] += $product["price"];
 }

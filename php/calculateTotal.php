@@ -5,6 +5,6 @@ $_SESSION["total"] = 0;
 
 foreach ($_SESSION["cartItems"] as $item)
 {
-    $_SESSION["total"] += $item["price"];
+    $_SESSION["total"] += $item["subtotal"];
 }
 echo $_SESSION["total"];

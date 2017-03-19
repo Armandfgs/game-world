@@ -24,7 +24,7 @@ function outputHead($title)
                  <script type="text/javascript" src="/game-world/js/productPage.js"></script>
                  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
                  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-
+                 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
             </head>
             <body>
     ');

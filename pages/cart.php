@@ -19,6 +19,7 @@
     window.onload = function () {
         showCartItems();
     };
+
 </script>
 
 <?php
