@@ -64,7 +64,7 @@ function outputNav($pageName)
                   </ul>
                 </li>
                 <li'. setActive($pageName, "account") .'><a href="/game-world/pages/account.php" id="accountTab">Account <span class="glyphicon glyphicon-user"></span></a></li>
-                <li'. setActive($pageName, "cart") .'><a href="/game-world/pages/cart.php">My Cart <span class="glyphicon glyphicon-shopping-cart"></span> </a></li>
+                <li'. setActive($pageName, "cart") .'><a href="/game-world/pages/cart.php">My Cart <span class="glyphicon glyphicon-shopping-cart"></span><span id="cartItemCount">'.cartCount().'</span> </a></li>
                 <li'. setActive($pageName, "contact") .'><a href="/game-world/pages/contactUs.php">Contact Us <span class="glyphicon glyphicon-earphone"></span> </a></li>
                 <li>
                   <form class="navbar-form navbar-left">
@@ -187,6 +187,14 @@ function outputAdminNav($pageName)
         </nav>
         </header>
     ');
+}
+
+function cartCount()
+{
+    if (isset($_SESSION["cartCount"]))
+    {
+        return $_SESSION["cartCount"];
+    }
 }
 
 ?>

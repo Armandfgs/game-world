@@ -24,12 +24,10 @@ foreach ($result as $product)
     $_SESSION["cartItems"] [] =  ['sku' => $product["sku"],
                     'name' => $product["name"],
                     'platform' => $product["platform"],
-                    'quantity' => 1,
                     'price' => $product["price"],
-                    'subtotal' => $product["price"]
     ];
-
     $_SESSION["total"] += $product["price"];
 }
+$_SESSION["cartCount"] = sizeof($_SESSION["cartItems"]);
 
 echo sizeof($_SESSION["cartItems"]);
