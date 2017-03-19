@@ -13,6 +13,15 @@
 .error{
     border: 1px solid red;
 }
+
+/*CART CSS*/
+#cartHeader{
+    border-bottom: 1px solid rgba(70,70,70,0.65);
+}
+
+#cartItems{
+    margin-bottom: 2%;
+}
 /*PAGE CSS*/
 #prodDetailsList{
     list-style:none;
