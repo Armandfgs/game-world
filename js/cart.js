@@ -34,7 +34,7 @@ function showCartItems()
                                             '<div class="text-center lead" id="totalPrice"></div>');
                 calculateTotal();
                 $("#cartItems").append('<div class="row text-center">'+
-                                            '<button type="button" class="btn btn-success">Confirm Order</button>'+
+                                            '<button type="button" class="btn btn-success"onclick="confirmOrder();">Confirm Order</button>'+
                                             '<button type="button" class="btn btn-danger" onclick="emptyCart();">Clear Cart</button>'+
                                         '</div>');
             }else
@@ -141,5 +141,28 @@ function removeItem(sku) {
         }
     };
     xhr.send();
+}
 
+function confirmOrder()
+{
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET","../php/createOrder.php", true);
+
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+    xhr.onreadystatechange = function ()
+    {
+        if (xhr.readyState == 4 && xhr.status == 200)
+        {
+            var result = xhr.responseText;
+            if( result == "successful")
+            {
+                window.location.href="/game-world/pages/userAccount.php";
+            }else
+            {
+                window.location.href="/game-world/pages/account.php";
+            }
+        }
+    };
+    xhr.send();
 }
