@@ -161,3 +161,45 @@ function setAccountTab(name)
     }
 
 }
+
+function tryAdminLogin()
+{
+    {
+        clearErrors();
+
+        var form = document.getElementById("adminLoginForm");
+        var action = form.getAttribute("action");
+
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("POST", action, true);
+
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+        xhr.onreadystatechange = function ()
+        {
+            if (xhr.readyState == 4 && xhr.status == 200)
+            {
+
+                var result = xhr.responseText;
+                console.log(result);
+                var account = JSON.parse(result);
+                console.log(account);
+
+
+                if (account.hasOwnProperty('errors') && account.errors.length > 0)
+                {
+                    displayErrors(account.errors);
+                } else
+                {
+                    delete account.password;
+                    //setAccountTab(account.username);
+
+
+                }
+            }
+        };
+        xhr.send(formData);
+    }
+}
