@@ -2,6 +2,12 @@
     require '../includes/common.php';
     outputHead( 'Admin - Add Product' );
     outputAdminNav( 'Add Products' );
+
+    if(!isset($_SESSION["admin"]))
+    {
+        header("Location: http://localhost/game-world/admin-Pages/admin.php");
+        die();
+    }
 ?>
 
  <div class="row">
