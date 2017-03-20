@@ -11,7 +11,8 @@ $collection = $db->accounts;
 
 $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'passwordAdmin', FILTER_SANITIZE_STRING);
-
+print_r($username);
+print_r($_POST);
 $account = [];
 $errors = [];
 
