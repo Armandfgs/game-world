@@ -14,19 +14,50 @@ setAccountTab();
 <div class="col-md-2"></div>
 <div class = "col-md-4">
     <h3>A Little Bit About Us</h3>
-    <article id="aboutUsTxt">
-        Lorem ipsum dolor sit amet, id inani legendos indoctum has, ad vel saepe diceret. Cu ius fierent appareat perpetua. Cu nonumy accusamus instructior mea, an eam tamquam petentium tincidunt. Id idque lorem interesset sea. Qui natum mucius elaboraret cu, an mel iudico animal epicurei, ei aperiri ceteros cum. Cu quo vocibus erroribus.
-        Falli constituam mei ut. Pro blandit accumsan disputationi ea, tibique definitionem an vel. Vis at amet veritus instructior. Vis cu nostrum suscipit neglegentur. Mutat altera blandit mel ex.
-        Ei congue offendit nam, nec latine deleniti ad. Per similique efficiantur ut, ad dicta sententiae vim. No eum simul detraxit, ei illum corrumpit suscipiantur sit. Erant veniam iuvaret in quo. An saperet euripidis sententiae eum, ei dolore doctus usu.
-        Pericula percipitur id nec, et vim ludus voluptaria theophrastus, mea tollit suscipit id. Eu nam eros vivendum, eu enim insolens definiebas vis. Vix ad viris nemore essent, oblique noluisse ei vim. Id molestiae conceptam has, et viris tantas pro, eu eos invenire vulputate.
-        Cum ei elitr dolor philosophia, delenit dignissim his no. Eu sit consequat disputationi, at laudem dissentias sit. Vel at sonet probatus, his impetus equidem theophrastus ne. Ei ius audire electram. Pro in wisi omittantur, ut nonumy forensibus mei. Delenit disputationi sit at, ex dicat blandit efficiendi usu.
+    <article class="text-justify" id="aboutUsTxt">
+        <p class="text-justify">
+            Hi, we are Armand-F Grech Scerri and Charlot Borg, two Middlesex University Students aged 20 and 24.
+            We are currently studying BsC Computer Studies at the Maltese Campus.
+            This website was created due to an assignment that was issued to use in the Web Design and Databases module.
+            It is here to demonstrate our knowledge and ability to use many different technologies including, HTML, CSS,
+            JavaScript, JQuery, Ajax, PHP, MongoDB and Bootstrap.
+        </p>
+        <p class="text-justify">
+            Game World is an E-Commerce Website that sells Mainly Video Games. The website has a custom built Content Managment
+            System and admins are able to add, remove or edit the items in the store. It also includes a fully functional cart built on Ajax
+            and the user can confirm the order where the order will then be stored. No actual money is processed. Users can search through the store
+            and some simple tracking is done to highlight items that the user might like based off his searches. We hope you have a good experience
+            going through our project. If you have any Queries feel free to contact us from the contact information offered.
+        </p>
+
     </article>
 </div>
 
-<div class="col-md-3" id="infoUs">
-    <p><span class="glyphicon glyphicon-earphone"></span> +356 79041997 </p>
-    <p><span class="glyphicon glyphicon-envelope"></span> test123test@gmail.com </p>
-    <p><span class="glyphicon glyphicon-user"></span> Facebook Account Link </p>
+<div class="col-md-3 text-right" id="infoUs">
+    <p class="text-right"><span class="glyphicon glyphicon-earphone"></span> +356 79041997 </p>
+    <p class="text-right"><span class="glyphicon glyphicon-earphone"></span> +356 99019134</p>
+    <p class="text-right"><span class="glyphicon glyphicon-envelope"></span> armandfgs@gmail.com </p>
+    <p class="text-right"><span class="glyphicon glyphicon-envelope"></span> charlotborg.mdx@gmail.com</p>
+    <div class="row ">
+        <div class="col-md-6"></div>
+        <div class="col-md-5 ">
+            <div class="col-md-5">
+                <a href="https://www.facebook.com/armandfgs" class="btn btn-block btn-social btn-facebook">
+                    <span class="fa fa-facebook-square fa-3x"></span>
+                </a>
+            </div>
+            <div class="col-md-5">
+                <a href="https://www.facebook.com/charlot.borg.33" class="btn btn-block btn-social btn-facebook">
+                    <span class="fa fa-facebook-square fa-3x"></span>
+                </a>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
 </div>
 
 <div id="map" class="col-md-12"></div>
