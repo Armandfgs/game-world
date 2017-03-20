@@ -8,10 +8,11 @@ $client = new MongoDB\Client;
 $db = $client->gameworld;
 
 $collection = $db->accounts;
+print_r($_POST);
 
 $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'passwordAdmin', FILTER_SANITIZE_STRING);
-
+print_r($username, $password);
 $account = [];
 $errors = [];
 
