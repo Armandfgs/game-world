@@ -19,15 +19,19 @@
     $gameworld = $client->gameworld;
     $product = $gameworld->products;
 
-    $search = $product->find();
+    $manager = new MongoDb\Driver\Manager('mongodb://localhost:27017');
+    $bulk = new MongoDB\Driver\BulkWrite;
 
-    foreach ($search as $document) {
+    $idString = $_GET["id"];
+
+    $id = new MongoDB\BSON\ObjectID( $idString );
+
         echo ('
 
-        <form method="post" id="postMethod" action="store-edited-product.php?id='. $document["_id"] .' " onsubmit="return productEditValidation()" name="editProduct">
+        <form method="post" id="postMethod" action="store-edited-product.php?id='. $id .' " onsubmit="return productEditValidation()" name="editProduct">
         
         ');
-    }
+
 ?>
             <fieldset>
                 <div class="form-group">
