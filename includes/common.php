@@ -13,6 +13,7 @@ function outputHead($title)
                 <meta name="viewport" content="width = device-width, initial-scale=1">
                  <link rel="stylesheet" type="text/css" href="/game-world/css/bootstrap.css" />
                  <link rel="stylesheet" type="text/css" href="/game-world/css/custom.css" />
+                 <link rel="stylesheet" type="text/css" href="/game-world/font-awesome-4.7.0/css/font-awesome.css" />
                  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
                  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
                  <script type="text/javascript" src="/game-world/js/bootstrap.min.js"></script>
