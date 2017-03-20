@@ -20,7 +20,7 @@
     if ($email == ''){$errors[] = 'emailLogin';}
     if ($password == ''){$errors[] = 'passwordLogin';}
 
-    if(!checkAccountExist($collection,$email))
+    if(!checkAccountExist($collection,$email,1))
     {
         $errors[] = 'emailLogin';
         $errors[] = 'passwordLogin';
@@ -57,16 +57,6 @@
         echo json_encode($account);
     }
 
-    function passwordMatch($enteredPassword,$accountPassword)
-    {
-        $passwordsMatch = false;
 
-        if(strcmp($enteredPassword,$accountPassword) == 0)
-        {
-            $passwordsMatch = true;
-        }
-
-        return $passwordsMatch;
-    }
 
 ?>
