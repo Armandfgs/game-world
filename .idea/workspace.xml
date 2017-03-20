@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="466f1c8c-ce9b-4fb7-9c76-11bd8178e1a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin-pages/admin.php" afterPath="$PROJECT_DIR$/admin-pages/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/login.js" afterPath="$PROJECT_DIR$/js/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/adminLogin.php" afterPath="$PROJECT_DIR$/php/adminLogin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/functions.php" afterPath="$PROJECT_DIR$/php/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/login.php" afterPath="$PROJECT_DIR$/php/login.php" />
-    </list>
+    <list default="true" id="466f1c8c-ce9b-4fb7-9c76-11bd8178e1a1" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
