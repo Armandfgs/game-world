@@ -15,12 +15,13 @@
     $email = filter_input(INPUT_POST, 'emailLogin', FILTER_SANITIZE_EMAIL);
     $password = filter_input(INPUT_POST, 'passwordLogin', FILTER_SANITIZE_STRING);
 
+
     $account = [];
     $errors = [];
     if ($email == ''){$errors[] = 'emailLogin';}
     if ($password == ''){$errors[] = 'passwordLogin';}
 
-    if(!checkAccountExist($collection,$email,1))
+    if(!checkAccountExist($collection,$email))
     {
         $errors[] = 'emailLogin';
         $errors[] = 'passwordLogin';

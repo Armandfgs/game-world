@@ -3,11 +3,8 @@
     outputHead( 'Admin - Manage Products' );
     outputAdminNav( 'Manage Products' );
 
-    if(!isset($_SESSION["admin"]))
-    {
-        header("Location: http://localhost/game-world/admin-Pages/admin.php");
-        die();
-    }
+    checkForAdmin();
+    setHomeTab();
 ?>
 
         <h2>Product Management </h2>

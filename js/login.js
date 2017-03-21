@@ -62,7 +62,7 @@ function registerAccount()
                     window.location.href="/game-world/index.php";
                 }
             }
-        }
+        };
 
         xhr.send(formData);
     }
@@ -162,6 +162,13 @@ function setAccountTab(name)
 
 }
 
+function setHomeTab(name)
+{
+    var accountTab = document.getElementById("homeAdminTab");
+    accountTab.innerHTML = name + '<span class="glyphicon glyphicon-user">';
+
+}
+
 function tryAdminLogin()
 {
     {
@@ -181,21 +188,19 @@ function tryAdminLogin()
         {
             if (xhr.readyState == 4 && xhr.status == 200)
             {
-
                 var result = xhr.responseText;
-                console.log(result);
                 var account = JSON.parse(result);
+
                 console.log(account);
-
-
                 if (account.hasOwnProperty('errors') && account.errors.length > 0)
                 {
                     displayErrors(account.errors);
                 } else
                 {
                     delete account.password;
-                    //setAccountTab(account.username);
-
+                    document.getElementById("adminHeader").innerHTML = "Access Granted";
+                    document.getElementById("loginAdmin").innerHTML = "<p class='lead text-center'>Welcome to the admin area " + account.username + " </p>";
+                    setHomeTab(account.username);
 
                 }
             }
@@ -203,3 +208,39 @@ function tryAdminLogin()
         xhr.send(formData);
     }
 }
+
+function registerAdmin()
+{
+    clearErrors();
+
+    var form = document.getElementById("adminRegisterForm");
+    var action = form.getAttribute("action");
+
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("POST", action, true);
+
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+    xhr.onreadystatechange = function ()
+    {
+        if (xhr.readyState == 4 && xhr.status == 200)
+        {
+            var result = xhr.responseText;
+            console.log(result);
+            var jsonResult = JSON.parse(result);
+
+            if (jsonResult.hasOwnProperty('errors') && jsonResult.errors.length > 0)
+            {
+                displayErrors(jsonResult.errors);
+            } else
+            {
+                //UPDATE LIST;
+            }
+        }
+    };
+
+    xhr.send(formData);
+}
+

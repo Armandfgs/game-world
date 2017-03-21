@@ -23,7 +23,6 @@
     function checkAdminAccountExist($collection, $username)
     {
         $accountExist = false;
-
         $result = $collection -> find(["username" => $username]);
         foreach ($result as $entry) {
             if (strcmp($entry['username'], $username) == 0) ;
@@ -32,7 +31,6 @@
             }
             return $accountExist;
         }
-
         return $accountExist;
     }
 

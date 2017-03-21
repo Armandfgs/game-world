@@ -174,13 +174,12 @@ function outputAdminNav($pageName)
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                 
-                <li '. setActive($pageName, "home") .'><a href="/game-world/admin-pages/admin.php">Home <span class="glyphicon glyphicon-home"></span> </a></li>
+                <li '. setActive($pageName, "home") .'><a id="homeAdminTab" href="/game-world/admin.php">Home <span class="glyphicon glyphicon-home"></span> </a></li>
                 <li '. setActive($pageName, "shop") .'><a href="/game-world/admin-pages/manage-products.php">Manage Products </a></li>
                 <li'. setActive($pageName, "account") .'><a href="/game-world/admin-pages/manage-admins.php">Manage Admins </a></li>
                 <li'. setActive($pageName, "cart") .'><a href="/game-world/admin-pages/view-orders.php">View Orders </a></li>
-                <li'. setActive($pageName, "contact") .'><a href="/game-world/admin-pages/login.php">Logout </a></li>
+                <li><a href="/game-world/php/logoutAdmin.php" onclick="logOutAdmin();"><span class="glyphicon glyphicon-log-out"></span></a></li>
                 <li>
-                  
                 </li>
               </ul>
             </div><!-- /.navbar-collapse -->
@@ -198,6 +197,32 @@ function cartCount()
     }else
     {
         return "";
+    }
+}
+
+function checkForAdmin()
+{
+    if(!isset($_SESSION["admin"]))
+    {
+        header("Location: http://localhost/game-world/admin.php");
+        die();
+    }
+}
+
+function setHomeTab()
+{
+    if (isset($_SESSION["admin"]) && !empty($_SESSION["admin"]))
+    {
+        $name = $_SESSION["admin"];
+        echo '<script type="text/javascript">',
+        "setHomeTab('$name ');",
+        '</script>';
+    }
+    else
+    {
+        echo '<script type="text/javascript">',
+        'setHomeTab("Home ");',
+        '</script>';
     }
 }
 
