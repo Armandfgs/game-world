@@ -1,5 +1,5 @@
 <?php
-include ("../../includes/common.php");
+include ("../includes/common.php");
 outputHead("Game World - Shop");
 outputNav("shop");
 ?>
@@ -23,14 +23,21 @@ outputNav("shop");
 
         <?php
 
-        require '../../phpmongodb/vendor/autoload.php';
+        require '../phpmongodb/vendor/autoload.php';
 
         //this can be used to output products in shop.php
         $client = new MongoDB\Client;
         $gameworld = $client->gameworld;
         $product = $gameworld->products;
 
-        $search = $product->find(['name' => 'Action'], ["sort" => ["platform" => 1]]);
+        $manager = new MongoDb\Driver\Manager('mongodb://localhost:27017');
+        $bulk = new MongoDB\Driver\BulkWrite;
+
+        $nameString = $_GET["name"];
+
+        $name = new MongoDB\BSON\ObjectID( $nameString );
+
+        $search = $product->find(['name' => $name], ["sort" => ["platform" => 1]]);
 
         foreach ($search as $document) {
 
