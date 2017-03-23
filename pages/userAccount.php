@@ -49,7 +49,6 @@
                         <input type="text" class="form-control" id="countryUpdate" name="country" placeholder="Country" value="" required>
                     </div>
                     <div class="text-center col-md-12">
-                        <a href="../php/getUserOrders.php">Get Orders</a>
                         <input type="button" name="register" class="btn btn-success" value="Update Account" onclick="updateAccount();">
                     </div>
                 </fieldset>
