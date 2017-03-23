@@ -19,13 +19,13 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="http://placehold.it/1200x650" alt="..." width="100%">
+      <img src="/game-world/res/images/zelda.jpg" alt="..." width="100%">
     </div>
     <div class="item">
-      <img src="http://placehold.it/1200x650" alt="..." width="100%">
+      <img src="/game-world/res/images/tombraider.jpg" alt="..." width="100%">
     </div>
     <div class="item">
-      <img src="http://placehold.it/1200x650" alt="..." width="100%">
+      <img src="/game-world/res/images/forhonor.jpg" alt="..." width="100%">
     </div>
   </div>
 
