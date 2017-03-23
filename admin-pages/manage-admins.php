@@ -33,3 +33,21 @@
             </form>
         </div>
     </div>
+    <div class="col-md-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+            <h2 class="pageHeaders" ">Admin List</h2>
+        </div>
+        <div class="col-md-12" id="adminList">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"> window.onload = function () {
+        getAdminList();
+    };</script>
+
+<?php
+footer();
+?>
+

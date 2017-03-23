@@ -9,12 +9,12 @@
 
         <h2>Product Management </h2>
 
-        <div id= "product-wrapper">
-
+        <div id= "product-wrapper" class="text-center">
             <a href="add-products.php" id="add-p-btn" class="btn btn-primary" role="button">Add a new Product</a>
 
             <div class="divTable">
-                <div class="divTableBody">
+                <div class="col-md-3"></div>
+                <div class="divTableBody col-md-8">
                     <div class="divTableRow">
                         <div class="divTableCell"><h3>Image</h3></div>
                         <div class="divTableCell"><h3>Product Name</h3></div>

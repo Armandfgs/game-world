@@ -228,7 +228,6 @@ function registerAdmin()
         if (xhr.readyState == 4 && xhr.status == 200)
         {
             var result = xhr.responseText;
-            console.log(result);
             var jsonResult = JSON.parse(result);
 
             if (jsonResult.hasOwnProperty('errors') && jsonResult.errors.length > 0)
@@ -236,7 +235,7 @@ function registerAdmin()
                 displayErrors(jsonResult.errors);
             } else
             {
-                //UPDATE LIST;
+                getAdminList();
             }
         }
     };

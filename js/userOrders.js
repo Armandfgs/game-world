@@ -58,5 +58,8 @@ function getOrders() {
         }
     };
     xhr.send();
+}
 
+function loadAllOrders() {
+    
 }
