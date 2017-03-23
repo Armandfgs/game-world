@@ -6,7 +6,7 @@ outputNav("shop", "search.php");
 setAccountTab();
 ?>
 
-<div class="row">
+<div class="row" id="wrapper">
     <!--side bar navigation-->
     <div id="sideBar" class="col-md-3">
         <h3>Game Categories</h3>
@@ -61,6 +61,18 @@ setAccountTab();
     </div>
 </div>
     
+    <script>
+function yHandler(){
+    var wrapper = document.getElementById('wrapper');
+    var contentHeight = wrapper.offsetHeight;
+    var yOffset = window.pageYOffset;
+    var y = yOffset + window.innerHeight;
+    if(y >= contentHeight){
+        wrapper.innerHTML += '<div class = "newData"></div>'; 
+    }
+}
+window.onscroll = yHandler;
+</script>
 <?php
     footer();
 ?>

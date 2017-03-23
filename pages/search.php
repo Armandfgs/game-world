@@ -4,7 +4,7 @@ outputHead("Game World - Shop");
 outputNav("shop", "search.php");
 ?>
 
-<div class="row">
+<div class="row" id="wrapper">
     <!--side bar navigation-->
     <div id="sideBar" class="col-md-3">
         <h3>Game Categories</h3>
@@ -68,30 +68,18 @@ outputNav("shop", "search.php");
 
 <!--https://www.experts-exchange.com/questions/27049459/How-to-track-user-activity-on-a-website-php.html#a35797723 --><!--advice on user tracking with cookies-->
 
-    <script>
-function showResult(str) {
-  if (str.length==0) { 
-    document.getElementById("livesearch").innerHTML="";
-    document.getElementById("livesearch").style.border="0px";
-    return;
-  }
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp=new XMLHttpRequest();
-  } else {  // code for IE6, IE5
-    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange=function() {
-    if (this.readyState==4 && this.status==200) {
-      document.getElementById("livesearch").innerHTML=this.responseText;
-      document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+<script>
+function yHandler(){
+    var wrapper = document.getElementById('wrapper');
+    var contentHeight = wrapper.offsetHeight;
+    var yOffset = window.pageYOffset;
+    var y = yOffset + window.innerHeight;
+    if(y >= contentHeight){
+        wrapper.innerHTML += '<div class = "newData"></div>'; 
     }
-  }
-  xmlhttp.open("GET","livesearch.php?q="+str,true);
-  xmlhttp.send();
 }
+window.onscroll = yHandler;
 </script>
-
 <?php
     footer();
 ?>
