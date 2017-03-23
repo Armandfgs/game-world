@@ -48,14 +48,14 @@
     <h2>Hot Right Now!</h2>
     <div class="row">
       <div class="col-md-4">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnailFront">
           <a href="/game-world/res/images/acsyndicate.jpg">
             <img src="/game-world/res/images/acsyndicate.jpg" class="portrait" alt="Assassin's Creed Syndicate" >
           </a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnailFront">
           <a href="/game-world/res/images/fallout4.jpg">
             <img src="/game-world/res/images/fallout4.jpg" alt="Fallout 4" >
             <div class="caption">
@@ -65,7 +65,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnailFront">
           <a href="/game-world/res/images/gearsofwar4.jpg">
             <img src="/game-world/res/images/gearsofwar4.jpg" alt="Gears of War 4">
           </a>
@@ -80,21 +80,21 @@
     <h2>Fresh out of The Oven!</h2>
     <div class="row">
       <div class="col-md-4">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnailFront">
           <a href="/game-world/res/images/horizon.jpg">
             <img src="/game-world/res/images/horizon.jpg" alt="Lights" class="imgStyle">
           </a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnailFront">
           <a href="/game-world/res/images/ff15.jpg">
             <img src="/game-world/res/images/ff15.jpg" alt="Nature" class="imgStyle portrait">
           </a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnailFront">
           <a href="/game-world/res/images/sniperelite4.jpg">
             <img src="/game-world/res/images/sniperelite4.jpg" alt="Fjords" class="imgStyle portrait">
           </a>
@@ -109,7 +109,7 @@
     <h2>Just For You!</h2>
     <div class="row">
       <div class="col-md-4">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnailFront">
           <a href="http://www.w3schools.com/w3images/lights.jpg">
             <img src="http://www.w3schools.com/w3images/lights.jpg" alt="Lights" class="imgStyle">
             <div class="caption">
@@ -119,7 +119,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnailFront">
           <a href="http://www.w3schools.com/w3images/nature.jpg">
             <img src="http://www.w3schools.com/w3images/nature.jpg" alt="Nature" class="imgStyle">
             <div class="caption">
@@ -129,7 +129,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnailFront">
           <a href="http://www.w3schools.com//w3images/fjords.jpg">
             <img src="http://www.w3schools.com/w3images/fjords.jpg" alt="Fjords" class="imgStyle">
             <div class="caption">
