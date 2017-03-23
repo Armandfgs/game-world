@@ -1,7 +1,7 @@
 <?php
 include ("../includes/common.php");
 outputHead("Game World - Account");
-outputNav("account");
+outputNav("account", "search.php");
 setAccountTab();
 ?>
 <div class="row">

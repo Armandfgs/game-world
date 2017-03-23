@@ -2,7 +2,7 @@
     include ("includes/common.php");
 
     outputHead("Game World - Home");
-    outputNav("home");
+    outputNav("home", "pages/search.php");
     setAccountTab();
 
 ?>

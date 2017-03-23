@@ -1,7 +1,7 @@
 <?php
 include ("../../includes/common.php");
 outputHead("Game World - Shop");
-outputNav("shop");
+outputNav("shop", "../search.php");
 ?>
 
 <div class="row">
