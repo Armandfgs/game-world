@@ -35,9 +35,7 @@ outputNav("shop", "search.php");
 
         $nameString = $_GET["name"];
 
-        $name = new MongoDB\BSON\ObjectID( $nameString );
-
-        $search = $product->find(['name' => $name], ["sort" => ["platform" => 1]]);
+        $search = $product->find(['name' => $nameString], ["sort" => ["platform" => 1]]);
 
         foreach ($search as $document) {
 
