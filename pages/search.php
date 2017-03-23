@@ -53,7 +53,7 @@ outputNav("shop", "search.php");
                     <h5>Plaform:' . $document["platform"] .'</h5>
                     <h5>Availability: <span class="inStock">In Stock</span></h5>
                     <a href="../product.php?p=' . $document["sku"] . ' " role="button" class="viewProduct">View Item</a>
-                    <button class="cartButton">Add to Cart  <span class="glyphicon glyphicon-shopping-cart"></span></button>
+                    <button class="cartButton" onclick="addToCartShortcut('. $document["sku"] .');">Add to Cart  <span class="glyphicon glyphicon-shopping-cart"></span></button>
                 </div>
             </div>
         </div>

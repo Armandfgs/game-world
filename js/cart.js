@@ -127,6 +127,27 @@ function addToCart()
     xhr.send();
 }
 
+function addToCartShortcut(sku)
+{
+    var url = "/game-world/php/addToCart?p=" + sku;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+    xhr.onreadystatechange = function ()
+    {
+        if (xhr.readyState == 4 && xhr.status == 200)
+        {
+            var cartItemCount = xhr.responseText;
+
+            document.getElementById("cartItemCount").innerHTML = cartItemCount;
+        }
+    };
+    xhr.send();
+}
+
 function removeItem(sku) {
 
     var url =  "../php/removeFromCart.php?p=" + sku;
