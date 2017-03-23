@@ -21,7 +21,6 @@ outputNav("shop");
 
         <h2>Shop</h2>
 
-
     <?php
 
         require '../phpmongodb/vendor/autoload.php';

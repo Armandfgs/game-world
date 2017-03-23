@@ -36,20 +36,13 @@ $product = [
   'price' => $price 
 ];
 
-//$filter=array('_id' => new MongoID(['id'] ));
-//$update=array('$set'=>$product);
-//$products->update($filter,$update);
 $idString = $_GET["id"];
 
 $id = new MongoDB\BSON\ObjectID( $idString );
 print_r($id);
-//$filter=array('_id' => $id);
-//$update=array('$set'=>$product);
-//$products->updateOne($filter,$update);
 
 $bulk->update(["_id" => $id], $product);
 $manager->executeBulkWrite('gameworld.products', $bulk);
-//$products ->updateOne(['_id' => new \MongoDB\BSON\ObjectID('58cc137df8a2f50c78004352')], ['$set' => [$product]]);
 
 header('Location: manage-products.php');
 exit;
