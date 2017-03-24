@@ -7,7 +7,7 @@
     setHomeTab();
 ?>
 
- <div class="row" id="wrapper">
+ <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-5 editProduct">
         <h2 class="pageHeaders" "> Edit Product</h2>

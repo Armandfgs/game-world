@@ -33,9 +33,12 @@ outputNav("shop", "search.php");
         $manager = new MongoDb\Driver\Manager('mongodb://localhost:27017');
         $bulk = new MongoDB\Driver\BulkWrite;
 
-        $nameString = $_GET["name"];
+        $nameString = $_GET["name"];//get name from url
 
-        $search = $product->find(['name' => $nameString], ["sort" => ["platform" => 1]]);
+        $regex = new MongoDB\BSON\Regex ( $nameString ,'i'); //can search for user input without case sensitivity
+        $search = $product->find(['name' => $regex ], ["sort" => ["platform" => 1]]); //find name and sort by platform in ascending order
+
+      //  $search = $product->find(['name' => $nameString], ["sort" => ["platform" => 1]]);
 
         foreach ($search as $document) {
 
@@ -66,7 +69,7 @@ outputNav("shop", "search.php");
 
 <!-- https://www.w3schools.com/php/php_ajax_livesearch.asp --><!--SEARCH FUNCTIONALITY-->
 
-<!--https://www.experts-exchange.com/questions/27049459/How-to-track-user-activity-on-a-website-php.html#a35797723 --><!--advice on user tracking with cookies-->
+<!--http://www.phpbuilder.com/columns/tracking-cookies-sessions/Leidago_Noabeb05242011.php3 --><!--advice on user tracking with cookies-->
 
 <script>
 function yHandler(){
