@@ -7,7 +7,7 @@ setAccountTab();
 <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-5 createAccount">
-        <h2 class="pageHeaders" "> Create an Account</h2>
+        <h2 class="pageHeaders"> Create an Account</h2>
         <div class="col-md-10">
             <form action="../php/registerAccount.php" method="POST" id="registerForm">
                 <fieldset>
@@ -24,7 +24,7 @@ setAccountTab();
                         <input type="password" class="form-control" id="passSignUp" name="passwordSignUp" placeholder="Password*" onblur="checkValidPass('passSignUp')" minlength="6" required>
                     </div>
                     <div class="col-md-12 text-center" id="passExplanation">
-                        <p>*Password must be at least 8 characters long,contain at least 1 number, 1 uppercase and any one of these symbols: !@#$%^\&amp</p>
+                        <p>*Password must be at least 8 characters long,contain at least 1 number, 1 uppercase and any one of these symbols: !@#$%^\&amp;</p>
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" id="repassSignUp" name="repass" placeholder="Re-Type Password*" onblur="checkSamePass('passSignUp','repassSignUp')" minlength="8" required>

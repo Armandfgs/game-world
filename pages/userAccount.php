@@ -1,7 +1,7 @@
 <?php
     include ("../includes/common.php");
 
-    outputHead("Game World - Home");
+    outputHead("Game World - Your Profile");
     outputNav("account", "search.php");
     setAccountTab();
 

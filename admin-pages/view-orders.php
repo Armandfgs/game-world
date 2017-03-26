@@ -1,6 +1,6 @@
 <?php
 	require '../includes/common.php';
-	outputHead("Admin - Home");
+	outputHead("Admin - View Orders");
 	outputAdminNav( 'cart' );
 	checkForAdmin();
     setHomeTab();
