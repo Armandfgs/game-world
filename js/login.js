@@ -116,11 +116,6 @@ function displayErrors(errors) {
     }
 }
 
-function registrationSuccessful()
-{
-    alert("Account Created");
-}
-
 function error()
 {
     alert("Error");
