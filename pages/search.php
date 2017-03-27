@@ -2,9 +2,11 @@
 include ("../includes/common.php");
 outputHead("Game World - Shop");
 outputNav("shop", "search.php");
+
+setAccountTab();
 ?>
 
-<div class="row" id="wrapper">
+<div class="row">
     <!--side bar navigation-->
     <div id="sideBar" class="col-md-3">
         <h3>Game Categories</h3>
@@ -21,7 +23,7 @@ outputNav("shop", "search.php");
 
         <h2>Shop</h2>
 
-        <?php
+     <?php
 
         require '../phpmongodb/vendor/autoload.php';
 
@@ -47,7 +49,7 @@ outputNav("shop", "search.php");
         <!--the product section-->
         <div class="col-xs-12 col-sm-4 col-md-4"> <!-- bootstrap column size and sections for productList -->
             <div class="thumbnail"> <!--bootstrap code for thumbnails inside product section for each product -->
-                <a href="../product.php?p=' . $document["sku"] . ' " alt="the product">
+                <a href="product.php?p=' . $document["sku"] . ' " alt="the product">
                     <img src=/game-world/res/images/'. $document["image"] .'>
                 </a>
                 <div class="caption"> <!--bootstrap code for product description inside each product -->
@@ -55,7 +57,7 @@ outputNav("shop", "search.php");
                     <h5>Price:' . $document["price"] .'</h5>
                     <h5>Plaform:' . $document["platform"] .'</h5>
                     <h5>Availability: <span class="inStock">In Stock</span></h5>
-                    <a href="../product.php?p=' . $document["sku"] . ' " role="button" class="viewProduct">View Item</a>
+                    <a href="product.php?p=' . $document["sku"] . ' " role="button" class="viewProduct">View Item</a>
                     <button class="cartButton" onclick="addToCartShortcut('. $document["sku"] .');">Add to Cart  <span class="glyphicon glyphicon-shopping-cart"></span></button>
                 </div>
             </div>
@@ -67,12 +69,8 @@ outputNav("shop", "search.php");
 
 <!-- http://www.responsivewebmobile.com/posts/view/2013/07/09/19/Responsive_Infinite_Scroll_Tutorial_Template_free --><!--INFINITE SCROLLING-->
 
-<!-- https://www.w3schools.com/php/php_ajax_livesearch.asp --><!--SEARCH FUNCTIONALITY-->
-
-<!--http://www.phpbuilder.com/columns/tracking-cookies-sessions/Leidago_Noabeb05242011.php3 --><!--advice on user tracking with cookies-->
-
 <script>
-function yHandler(){
+/*function yHandler(){
     var wrapper = document.getElementById('wrapper');
     var contentHeight = wrapper.offsetHeight;
     var yOffset = window.pageYOffset;
@@ -81,8 +79,10 @@ function yHandler(){
         wrapper.innerHTML += '<div class = "newData"></div>'; 
     }
 }
-window.onscroll = yHandler;
+window.onscroll = yHandler;*/
+
 </script>
+
 <?php
     footer();
 ?>

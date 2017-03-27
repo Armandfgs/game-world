@@ -6,7 +6,7 @@ outputNav("shop", "search.php");
 setAccountTab();
 ?>
 
-<div class="row" id="wrapper">
+<div class="row">
     <!--side bar navigation-->
     <div id="sideBar" class="col-md-3">
         <h3>Game Categories</h3>
