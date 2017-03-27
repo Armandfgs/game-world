@@ -5,7 +5,7 @@ require '../phpmongodb/vendor/autoload.php';
 
 class passwordChecking extends UnitTestCase
 {
-    function match()
+    function testMatch()
     {
         $string1 = "Test";
         $string2 = "Test";
@@ -13,7 +13,7 @@ class passwordChecking extends UnitTestCase
         $this->assertTrue($result);
     }
 
-    function doNotMatch()
+    function testDoNotMatch()
     {
         $string1 = "Test";
         $string2 = "wont match";
