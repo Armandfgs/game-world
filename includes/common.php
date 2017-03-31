@@ -73,7 +73,7 @@ function outputNav($pageName, $link, $mongoLink)
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                '); foreach ($search as $documents){ echo('  <li '. setActive($pageName, "home") .'><a href="/game-world/index.php?name='. $documents["name"] .'">');}echo('Home <span class="glyphicon glyphicon-home"></span> </a></li>
+                <li '. setActive($pageName, "home") .'>'); foreach ($search as $documents){ echo('<a href="/game-world/index.php?name='. $documents["name"] .'">');}echo('Home <span class="glyphicon glyphicon-home"></span> </a></li>
                 <li '. setActive($pageName, "shop") . 'class="dropdown">
                   <a href="/game-world/pages/shop.php" class="dropdown-toggle" data-toggle="dropdown">Shop <span class="glyphicon glyphicon-euro"></span> <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
