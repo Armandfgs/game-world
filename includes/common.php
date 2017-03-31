@@ -58,22 +58,16 @@ function outputNav($pageName, $link, $mongoLink)
 
     $search = $searches->find();
 
-        foreach ($search as $document) {
-    echo('
-              <a class="navbar-brand" href="/game-world/index.php?name='. $document["name"] .'">');}echo('Game World</a>
-    ');
 
-    $searches = $gameworld->search;
-
-    $search = $searches->find([], ['limit' => 1]);
-        
     echo('
+              <a class="navbar-brand" href="/game-world/index.php?name=battlefield">Game World</a>
+              
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li '. setActive($pageName, "home") .'>'); foreach ($search as $documents){ echo('<a href="/game-world/index.php?name='. $documents["name"] .'">');}echo('Home <span class="glyphicon glyphicon-home"></span> </a></li>
+                <li '. setActive($pageName, "home") .'><a href="/game-world/index.php?name=battlefield ">Home <span class="glyphicon glyphicon-home"></span> </a></li>
                 <li '. setActive($pageName, "shop") . 'class="dropdown">
                   <a href="/game-world/pages/shop.php" class="dropdown-toggle" data-toggle="dropdown">Shop <span class="glyphicon glyphicon-euro"></span> <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
