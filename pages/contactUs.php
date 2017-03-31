@@ -2,7 +2,7 @@
 include ("../includes/common.php");
 
 outputHead("Game World - Contact Us");
-outputNav("contact", "search.php");
+outputNav("contact", "search.php", "../phpmongodb/vendor/autoload.php");
 setAccountTab();
 ?>
 <div class="row">

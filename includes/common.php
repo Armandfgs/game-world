@@ -32,7 +32,7 @@ function outputHead($title)
     ');
 }
 
-function outputNav($pageName, $link)
+function outputNav($pageName, $link, $mongoLink)
 {
     echo
     ('
@@ -48,13 +48,32 @@ function outputNav($pageName, $link)
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/game-world/index.php">Game World</a>
+    ');
+    require $mongoLink;
+
+    //this can be used to output products in shop.php
+    $client = new MongoDB\Client;
+    $gameworld = $client->gameworld;
+    $searches = $gameworld->search;
+
+    $search = $searches->find();
+
+        foreach ($search as $document) {
+    echo('
+              <a class="navbar-brand" href="/game-world/index.php?name='. $document["name"] .'">');}echo('Game World</a>
+    ');
+
+    $searches = $gameworld->search;
+
+    $search = $searches->find([], ['limit' => 1]);
+        
+    echo('
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li '. setActive($pageName, "home") .'><a href="/game-world/index.php">Home <span class="glyphicon glyphicon-home"></span> </a></li>
+                '); foreach ($search as $documents){ echo('  <li '. setActive($pageName, "home") .'><a href="/game-world/index.php?name='. $documents["name"] .'">');}echo('Home <span class="glyphicon glyphicon-home"></span> </a></li>
                 <li '. setActive($pageName, "shop") . 'class="dropdown">
                   <a href="/game-world/pages/shop.php" class="dropdown-toggle" data-toggle="dropdown">Shop <span class="glyphicon glyphicon-euro"></span> <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">

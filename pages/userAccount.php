@@ -2,7 +2,7 @@
     include ("../includes/common.php");
 
     outputHead("Game World - Your Profile");
-    outputNav("account", "search.php");
+    outputNav("account", "search.php", "../phpmongodb/vendor/autoload.php");
     setAccountTab();
 
 ?>

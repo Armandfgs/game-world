@@ -2,7 +2,7 @@
     include ("includes/common.php");
 
     outputHead("Game World - Home");
-    outputNav("home", "pages/search.php");
+    outputNav("home", "pages/search.php", "phpmongodb/vendor/autoload.php");
     setAccountTab();
 
 ?>
@@ -105,41 +105,89 @@
   <!--USER RELATED ITEMS SECTION-->
   <div class="content-space-three">
   </div>
-  <div class="content-block-one">
+
+  <?php
+     require 'phpmongodb/vendor/autoload.php';
+
+        //this can be used to output products in shop.php
+        $client = new MongoDB\Client;
+        $gameworld = $client->gameworld;
+        $userSearch = $gameworld->products;
+
+        $manager = new MongoDb\Driver\Manager('mongodb://localhost:27017');
+        $bulk = new MongoDB\Driver\BulkWrite;
+
+        $nameString = $_GET["name"];//get name from url
+
+        $regex = new MongoDB\BSON\Regex ( $nameString ,'i'); //can search for user input without case sensitivity        
+
+        $search = $userSearch->find(['name' => $regex], ['limit' => 1], ["sort" => ["platform" => 1]]); //find name and sort by platform in ascending order
+
+ foreach ($search as $document) {
+
+        echo ('
+
+  <div class="content-block-one" id="recommend">
     <h2>Just For You!</h2>
     <div class="row">
       <div class="col-md-4">
         <div class="thumbnail thumbnailFront">
-          <a href="http://www.w3schools.com/w3images/lights.jpg">
-            <img src="http://www.w3schools.com/w3images/lights.jpg" alt="Lights" class="imgStyle">
-            <div class="caption">
-              <p>Lorem ipsum...</p>
-            </div>
+          <a href="pages/product.php?p=' . $document["sku"] . ' " alt="the product">
+             <img src=/game-world/res/images/'. $document["image"] .'>
           </a>
         </div>
       </div>
       <div class="col-md-4">
         <div class="thumbnail thumbnailFront">
-          <a href="http://www.w3schools.com/w3images/nature.jpg">
-            <img src="http://www.w3schools.com/w3images/nature.jpg" alt="Nature" class="imgStyle">
-            <div class="caption">
-              <p>Lorem ipsum...</p>
-            </div>
+          <a href="pages/product.php?p=' . $document["sku"] . ' " alt="the product">
+             <img src=/game-world/res/images/'. $document["image"] .'>
           </a>
         </div>
       </div>
       <div class="col-md-4">
         <div class="thumbnail thumbnailFront">
-          <a href="http://www.w3schools.com//w3images/fjords.jpg">
-            <img src="http://www.w3schools.com/w3images/fjords.jpg" alt="Fjords" class="imgStyle">
-            <div class="caption">
-              <p>Lorem ipsum...</p>
-            </div>
+          <a href="pages/product.php?p=' . $document["sku"] . ' " alt="the product">
+             <img src=/game-world/res/images/'. $document["image"] .'>
           </a>
         </div>
       </div>
     </div>
   </div>
+  ');
+      }
+  ?>
+
+<script>
+
+/*var recommender = new Recommender;
+
+window.onload = showRecommendation;
+
+  function search(){
+    var searchText = document.getElementById("searchBox").value;
+
+    reommender.addKeyord(searchText);
+    showRecommendation();
+
+  }
+
+  function showRecommendation(){
+    document.getElementById("recommend").innerHTML = recommender.getTopKeyword();
+    var getKey = recommendations.getTopKeyword();
+    window.location.href = "index.php?keyword=" + getKey;
+  }
+
+// Evry time the document loads will check if there's a session cointining the logged in user
+$(document).ready(function(){
+    // GET request to server to see the session var
+    $.get("login-management.php?CheckUser", function (data){
+        if (data !== 'User Not Logged in') {
+            changeButtons(); // if there is a user logged in, the loggin and register buttons get replaces
+        } // end if
+    })// end GET
+});// end ready()*/
+
+    </script>
 </body>
 
 <?php

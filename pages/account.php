@@ -1,7 +1,7 @@
 <?php
 include ("../includes/common.php");
 outputHead("Game World - Account");
-outputNav("account", "search.php");
+outputNav("account", "search.php", "../phpmongodb/vendor/autoload.php");
 setAccountTab();
 ?>
 <div class="row">

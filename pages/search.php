@@ -1,7 +1,7 @@
 <?php
 include ("../includes/common.php");
 outputHead("Game World - Shop");
-outputNav("shop", "search.php");
+outputNav("shop", "search.php", "../phpmongodb/vendor/autoload.php");
 
 setAccountTab();
 ?>
@@ -30,6 +30,7 @@ setAccountTab();
         //this can be used to output products in shop.php
         $client = new MongoDB\Client;
         $gameworld = $client->gameworld;
+
         $product = $gameworld->products;
 
         $manager = new MongoDb\Driver\Manager('mongodb://localhost:27017');
@@ -40,8 +41,7 @@ setAccountTab();
         $regex = new MongoDB\BSON\Regex ( $nameString ,'i'); //can search for user input without case sensitivity
         $search = $product->find(['name' => $regex ], ["sort" => ["platform" => 1]]); //find name and sort by platform in ascending order
 
-      //  $search = $product->find(['name' => $nameString], ["sort" => ["platform" => 1]]);
-
+         //finding the details from the database and displaying them on the screen
         foreach ($search as $document) {
 
         echo ('
@@ -64,24 +64,18 @@ setAccountTab();
         </div>
         ');
         }   
+
+        $search = $gameworld->search;
+
+        $nameString = $_GET["name"];
+
+        $searches = [
+          'name' => $nameString
+        ];
+        
+        $userInput = $search->insertOne($searches);
+
     ?>
-
-
-<!-- http://www.responsivewebmobile.com/posts/view/2013/07/09/19/Responsive_Infinite_Scroll_Tutorial_Template_free --><!--INFINITE SCROLLING-->
-
-<script>
-/*function yHandler(){
-    var wrapper = document.getElementById('wrapper');
-    var contentHeight = wrapper.offsetHeight;
-    var yOffset = window.pageYOffset;
-    var y = yOffset + window.innerHeight;
-    if(y >= contentHeight){
-        wrapper.innerHTML += '<div class = "newData"></div>'; 
-    }
-}
-window.onscroll = yHandler;*/
-
-</script>
 
 <?php
     footer();
