@@ -5,7 +5,6 @@ outputNav("shop", "../search.php", "../../phpmongodb/vendor/autoload.php");
 
 setAccountTab();
 ?>
-
 <div class="row">
     <!--side bar navigation-->
     <div id="sideBar" class="col-md-3">
@@ -57,6 +56,9 @@ setAccountTab();
         ');
         }   
     ?>
+    </div>
+</div>
+
 
 <?php
     footer();

@@ -57,7 +57,8 @@ setAccountTab();
         ');
         }   
     ?>
-
+    </div>
+</div>
 <?php
     footer();
 ?>
