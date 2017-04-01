@@ -139,7 +139,6 @@ function checkForErrors()
     {
         hasError = true;
     }
-    console.log(hasError);
     return hasError;
 }
 

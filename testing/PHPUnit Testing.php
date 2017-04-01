@@ -2,6 +2,7 @@
 include "../simpletest/autorun.php";
 require "../php/functions.php";
 require '../phpmongodb/vendor/autoload.php';
+include "../includes/common.php";
 
 class passwordChecking extends UnitTestCase
 {
@@ -73,6 +74,36 @@ class adminAccountExist extends UnitTestCase
 
         $result =  checkAdminAccountExist($collection,"Armandfgs");
         $this->assertTrue($result);
+    }
+}
+
+class setActive extends UnitTestCase
+{
+    function testSetActive()
+    {
+        $result = setActive("Test", "Test");
+        $this->assertIdentical(' class="active"', $result);
+    }
+    function testSetActiveFalse()
+    {
+        $result = setActive("Test", "not Equal");
+        $this->assertNull($result);
+    }
+}
+
+class cartCount extends UnitTestCase
+{
+    function testEmptyCart()
+    {
+        $result = cartCount();
+        $this->assertIdentical($result,"");
+    }
+    function testFullCart()
+    {
+        $_SESSION["cartCount"] = 999;
+        $result = cartCount();
+        $this->assertIdentical($result,999);
+        unset($_SESSION["cartCount"]);
     }
 }
 

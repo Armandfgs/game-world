@@ -5,15 +5,44 @@
     <title>QUnit Testing</title>
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.1.1.css">
     <script src="https://code.jquery.com/qunit/qunit-2.1.1.js"></script>
+    <script type="text/javascript" src="/game-world/js/login.js"></script>
 </head>
 <body>
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
-
+    <input id="passSignUp" name="passSignUp" value="test">
+    <input id="repassSignUp" value="test">
+    <div id="homeAdminTab"></div>
     <script>
-        QUnit.test("Name of Test",function (assert) {
-            assert.strictEqual(setAccountTab("Account", document.getElementById()))
-        })
+        QUnit.test("Check for Errors - No Error",function (assert) {
+            var result = checkForErrors();
+            assert.equal(result, false);
+        });
+
+        QUnit.test("Check for Errors - Error",function (assert) {
+            document.getElementById("passSignUp").value = "not Equal";
+            var result = checkForErrors();
+            assert.equal(result, true);
+        });
+
+        QUnit.test("Set Home Tab",function (assert) {
+            setHomeTab("test");
+            var result = document.getElementById("homeAdminTab").innerHTML;
+            assert.equal(result,'test<span class="glyphicon glyphicon-user"></span>');
+        });
+
+        QUnit.test("Display Errors",function (assert) {
+            var errors = ['passSignUp'];
+            displayErrors(errors);
+            var result = document.getElementById("passSignUp").getAttribute("class");
+            assert.equal(result,'error');
+        });
+
+        QUnit.test("Clear Errors",function (assert) {
+            clearErrors();
+            var result = document.getElementById("passSignUp").getAttribute("class");
+            assert.equal(result,'');
+        });
     </script>
 </body>
 </html>
